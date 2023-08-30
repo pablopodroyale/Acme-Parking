@@ -1,15 +1,9 @@
 ﻿using AcmeParking.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace AcmeParking
+namespace AcmeParking.SearchStrategies
 {
-    public class WeightSearchStrategy : ISearchStrategy
+    public class RegistrationNumberSearchStrategy : ISearchStrategy
     {
-
         public Car GetCar(SearchDTO search, Car[,] parkingSpots)
         {
             Car car = null;
@@ -17,14 +11,13 @@ namespace AcmeParking
             {
                 for (int j = 0; j < parkingSpots.GetLength(1); j++)
                 {
-                    if (parkingSpots[i, j] != null && parkingSpots[i,j].Weight == search.Weight)
+                    if (parkingSpots[i, j] != null && parkingSpots[i, j].RegistrationNumber == search.RegistrationNumber)
                     {
                         car = parkingSpots[i, j];
                         parkingSpots[i, j] = null;
                         break;
                     }
                 }
-
                 if (car != null)
                 {
                     break;

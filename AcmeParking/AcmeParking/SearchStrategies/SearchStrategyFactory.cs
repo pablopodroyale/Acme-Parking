@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AcmeParking.Enum;
 
-namespace AcmeParking
+namespace AcmeParking.SearchStrategies
 {
     internal class SearchStrategyFactory : ISearchStrategyFactory
     {
         public ISearchStrategy GetSearchStrategy(SearchType searchType)
         {
             ISearchStrategy? searchStrategy = null;
-            
+
             switch (searchType)
             {
                 case SearchType.WEIGHT:

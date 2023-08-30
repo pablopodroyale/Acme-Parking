@@ -1,5 +1,6 @@
-using AcmeParking;
+using AcmeParking.Enum;
 using AcmeParking.Models;
+using AcmeParking.SearchStrategies;
 
 namespace AcmeParkingTests
 {

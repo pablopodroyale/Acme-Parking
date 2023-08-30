@@ -1,4 +1,7 @@
-﻿namespace AcmeParking.Models
+﻿using AcmeParking.Enum;
+using AcmeParking.SearchStrategies;
+
+namespace AcmeParking.Models
 {
     public class Parking
     {

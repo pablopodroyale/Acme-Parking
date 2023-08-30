@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AcmeParking
+namespace AcmeParking.SearchStrategies
 {
     public interface ISearchStrategy
     {
-       public abstract Car GetCar(SearchDTO search, Car[,] parkingSpots);
+        public abstract Car GetCar(SearchDTO search, Car[,] parkingSpots);
     }
 }
